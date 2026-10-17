@@ -6,7 +6,7 @@ from . import WProxy
 def run():
     parser = argparse.ArgumentParser(description='Websocket proxy')
     parser.add_argument('--host', help='Proxy host', default="0.0.0.0")
-    parser.add_argument('--port', help='Proxy port', default=8765)
+    parser.add_argument('--port', help='Proxy port', type=int, default=8765)
     parser.add_argument('--url', help='Websocket URL to proxy')
     parser.add_argument('--ssl_cert', help='SSL Certificate')
     parser.add_argument('--ssl_key', help='SSL Key')
