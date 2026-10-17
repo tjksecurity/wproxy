@@ -8,7 +8,7 @@ version = "0.0.2"
 description = "Websocket proxy"
 readme = "README.rst"
 authors = [{ name = "Ferdinand Silva", email = "ferdinandsilva@ferdinandsilva.com" }]
-requires-python = ">=3.6"
+requires-python = ">=3.10"
 classifiers = [
     "Intended Audience :: Developers",
     "Natural Language :: English",
@@ -17,7 +17,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "websockets",
+    "websockets>=17.2,<18",
 ]
 
 [project.urls]

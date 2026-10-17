@@ -29,4 +29,9 @@ Running the console script
 ==========================
 ::
 
-    wproxy --url wss://urltoproxy.com:8888 --port 9002 --headers "Sec-WebSocket-Protocol:sip" --ssl_cert fullchain1.pem --ssl_key privkey1.pem 
+    wproxy --url wss://urltoproxy.com:8888 --port 9002 --headers "Sec-WebSocket-Protocol:sip" --ssl_cert fullchain1.pem --ssl_key privkey1.pem
+Runtime compatibility
+---------------------
+Requires Python 3.10+ and websockets 17.2.x. The CLI owns its asyncio loop.
+Async callers can await WProxy.start(), then close()/wait_closed() the returned server.
+Run isolated regressions with: python -m unittest discover -s tests -v.
